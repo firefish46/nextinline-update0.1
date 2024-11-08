@@ -1,0 +1,98 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #192835;
+}
+
+/* Header styling */
+.header {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #192835;
+    color: white;
+    
+}
+
+/* Logo styling */
+.header__logo h1 {
+    font-size: 2.8em;
+    color: #b1b1b1;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+/* Navbar links styling */
+.navbar__link {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__link span {
+    margin-left: 8px;
+}
+
+.navbar__link i {
+    transition: transform 0.3s ease;
+}
+
+/* Hover animation for navbar links */
+.navbar__link:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.navbar__link:hover i {
+    transform: scale(1.1);
+}
+
+/* Active link styling */
+.navbar__item.active .navbar__link {
+    color: #4CAF50;
+}
+
+/* Icons styling */
+.navbar__link i {
+    color: #b1b1b1;
+    font-size: 1.2em;
+}
+
+/* Header fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

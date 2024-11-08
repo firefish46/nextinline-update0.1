@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Appointments</title>
+  <link rel="stylesheet" href="filter_appointments.css">
+  <header>
+  </header>
+  <header id="navbar"></header>
+  
+  <!-- Your content goes here -->
+
+  <script>
+    // Load the navbar HTML from navbar.html
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+    });
+  </script>
+</head>
+<body>
+ 
+
+  <main>
+    <section class="filter-section">
+      <h1>find appointments</h1>
+      <select id="doctorSelect">
+        <option value="" class="select">Select a doctor</option>
+        <option value="Dr. John Doe" class="select">Dr. John Doe</option>
+        <option value="Dr. Jane Smith" class="select">Dr. Jane Smith</option>
+        <option value="Dr. Emily Brown"class="select">Dr. Emily Brown</option>
+      </select>
+    </section>
+    <input type="text" id="searchInput" placeholder="Search by Patient Name or ID">
+
+
+    <section class="appointments-section">
+      <h2>Appointments</h2>
+      <ul id="appointmentList">
+        <!-- Appointments will be dynamically populated here -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="filter_script.js"></script>
+</body>
+</html>

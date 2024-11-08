@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mehedi Hasan - Cardiologist</title>
+    <link rel="stylesheet" href="doctors.css">
+    <header id="navbar"></header>
+  
+    <!-- Your content goes here -->
+  
+    <script>
+      // Load the navbar HTML from navbar.html
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("navbar.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("navbar").innerHTML = data);
+      });
+    </script>
+  </head>
+  <body>
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <img src="https://via.placeholder.com/120" alt="Dr. John Doe">
+        <h3>Dr. Mehedi Hasan</h3>
+        <p>Cardiologist</p>
+        <p>Dr. Mehedi Hasan is an experienced cardiologist with 10+ years of expertise in heart-related issues.</p>
+        <button onclick="bookAppointment('home.html?doctor=Dr. John Doe')">Book Appointment</button>
+    </div>
+
+    <script>
+        function bookAppointment(index) {
+          
+       
+            window.location.href = index;
+        
+   
+            alert("Appointment book with Dr. Mehedi Hasan?");
+        }
+    </script>
+
+</body>
+</html>

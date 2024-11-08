@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickSlot</title>
+  <link rel="stylesheet" href="dstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <body>
+    <header id="navbar"></header>
+  
+    <!-- Your content goes here -->
+  
+    <script>
+      // Load the navbar HTML from navbar.html
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("navbar.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("navbar").innerHTML = data);
+      });
+    </script>
+  </body>
+  
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2>Available Doctors</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Doctor 1">
+        <h3>Dr. Mehedi Hasan</h3>
+        <p>Cardiologist</p>
+        <button onclick="viewProfile('doc1.html')">View Profile</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Doctor 2">
+        <h3>Dr. Jane Smith</h3>
+        <p>Dermatologist</p>
+        <button onclick="viewProfile('doc2.html')">View Profile</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Doctor 3">
+        <h3>Dr. Luney Hook</h3>
+        <p>Dermatologist</p>
+        <button onclick="viewProfile('doc3.html')">View Profile</button>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2024 QuickSlot. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/mh.ethin" target="_blank" aria-label="Facebook" class="icon facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://github.com/firefish46" target="_blank" aria-label="GitHub" class="icon github">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/mehedi-hasan-582660336" target="_blank" aria-label="LinkedIn" class="icon linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function viewProfile(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

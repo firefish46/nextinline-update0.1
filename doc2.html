@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Jane Smith - Dermatologist</title>
+    <link rel="stylesheet" href="doctors.css">
+
+<header id="navbar"></header>
+  
+<!-- Your content goes here -->
+
+<script>
+  // Load the navbar HTML from navbar.html
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  });
+</script>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img src="https://via.placeholder.com/120" alt="Dr. Jane Smith">
+        <h3>Dr. Jane Smith</h3>
+        <p>Dermatologist</p>
+        <p>Dr. Jane Smith specializes in skin conditions and has over 8 years of experience.</p>
+        <button onclick="bookAppointment()">Book Appointment</button>
+    </div>
+
+    <script>
+        function bookAppointment() {
+            alert("Appointment booked with Dr. Jane Smith!");
+        }
+    </script>
+
+</body>
+</html>
